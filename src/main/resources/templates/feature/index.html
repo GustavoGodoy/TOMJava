@@ -1,0 +1,177 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js}" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>Tourism on Mars Company</title>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+    <meta name="theme-color" content="#712cf9">
+</head>
+<body class="text-center">
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
+    <div class="container-fluid">
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarCenteredExample"
+                aria-controls="navbarCenteredExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+        <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarCenteredExample"
+        >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{viagem/criar}">Agende sua viagem</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img th:src="@{assets/foguete3.jpg}" width="100%" height="100%">
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Agende sua viagem</h1>
+                    <p>Para agendar sua viagem basta clicar abaixo</p>
+                    <p><a class="btn btn-lg" style="background-color: #ffa500;" th:href="@{viagem/criar}">Agende sua viagem</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img th:src="@{assets/mars.jpg}" width="100%" height="100%">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Agende sua viagem</h1>
+                    <p>Para agendar sua viagem basta clicar abaixo</p>
+                    <p><a class="btn btn-lg" style="background-color: #ffa500;" th:href="@{viagem/criar}">Agende sua viagem</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img th:src="@{assets/foguete.jpg}" width="100%" height="0%">
+
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>Agende sua viagem</h1>
+                    <p>Para agendar sua viagem basta clicar abaixo</p>
+                    <p><a class="btn btn-lg" style="background-color: #ffa500;" th:href="@{viagem/criar}">Agende sua viagem</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="b-example-divider"></div>
+<div class="container-fluid pt-3 pb-3" style="background-color: orange">
+    <h2>Viagens
+    <small class="text-muted"> (Ja marcadas)</small>
+    </h2>
+</div>
+<div class="container">
+<div class="row">
+    <div th:each="viagem: ${viagens}" class="col-sm-3 pt-3 pb-4">
+        <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>ID:</b> <a th:text="${viagem.getId()}"></a> </li>
+                    <li class="list-group-item"><b>Data da viagem: </b><a th:text="${viagem.getData_decolagem()}"></a> </li>
+                    <li class="list-group-item"><b>Quantidade de dias: </b><a th:text="${viagem.getQtd_dias()}"></a> </li>
+                    <li class="list-group-item"><b>Quantidade de assentos </b><a th:text="${viagem.getQtd_assentos()}"></a> </li>
+                    <li class="list-group-item"><b>Nome primeiro comandante: </b><a th:text="${viagem.getPrimeiro_comandante()}"></a> </li>
+                    <li class="list-group-item"><b>Matricula primeiro comandante: </b><a th:text="${viagem.getMatricula_prim_comandante()}"></a> </li>
+                    <li class="list-group-item"><b>Nome segundo comandante: </b><a th:text="${viagem.getSegundo_comandante()}"></a> </li>
+                    <li class="list-group-item"><b>Matricula segundo comandante: </b><a th:text="${viagem.getMatricula_segn_comandante()}"></a> </li>
+                    <li class="list-group-item"><b>Data de retorno prevista: </b><a th:text="${viagem.getData_retorno()}"></a> </li>
+                </ul>
+            <div class="card-body">
+                <div class="row d-flex align-items-center justify-content-center">
+                        <a th:href="@{viagem/__${viagem.getId()}__}" class="btn btn-primary col-4 pr-1">Editar</a>
+                        <a th:href="@{deletar/__${viagem.getId()}__}" class="btn btn-danger col-4">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script th:src="@{https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js}" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js}" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
